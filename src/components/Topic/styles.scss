@@ -1,0 +1,62 @@
+.topic {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  .vote-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(135, 138, 140);
+    width: 40px;
+    text-align: center;
+    padding-top: 8px;
+
+    .votes {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+    }
+
+    button {
+      background: none;
+      outline: none;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+    .upvote-btn:hover {
+      color: rgb(204, 55, 0);
+    }
+
+    .downvote-btn:hover {
+      color: rgb(90, 117, 204);
+    }
+  }
+
+  .content-wrapper {
+    flex-grow: 1;
+    background: white;
+    color: black;
+    padding-top: 8px;
+
+    .header {
+      color: rgb(135, 138, 140);
+      font-size: 12px;
+      line-height: 16px;
+      margin: 0 8px 8px;
+    }
+
+    .content {
+      margin-left: 8px;
+      color: rgb(34, 34, 34);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      padding-right: 5px;
+      padding-bottom: 22px;
+    }
+  }
+}
