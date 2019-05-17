@@ -7,3 +7,7 @@ const instance = axios.create({
 export const getRequest = (url) => {
   return instance.get(url);
 };
+
+export const postRequest = (url, body) => {
+  return instance.post(url, body);
+};

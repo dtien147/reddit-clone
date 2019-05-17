@@ -26,9 +26,15 @@ const stateTransformer = (state) => {
   return newState;
 };
 
-const logger = createLogger({ stateTransformer });
 
-const createStoreWithMiddleware = applyMiddleware(thunk, promiseMiddleware, logger)(createStore);
+const middlewares = [thunk, promiseMiddleware];
+
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  const logger = createLogger({ stateTransformer });
+  middlewares.push(logger);
+}
+
+const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 const store = createStoreWithMiddleware(
   combineReducers({ AppReducer })
 );

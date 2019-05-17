@@ -45,7 +45,7 @@ app.get('/api', function(req, res) {
 });
 
 /**
- * API for getting list of topic
+ * API for getting topic list
  * Return a list of top 20 topics (sorted by upvotes, descending)
  */
 app.get('/api/topics', function(req, res){

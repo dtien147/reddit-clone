@@ -2,10 +2,60 @@
   min-width: 100vw;
   min-height: 100vh;
   background: #DAE0E6;
+
+  .container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+
+    .topics {
+      flex-grow: 1;
+    }
+
+    .home {
+      background: white;
+      border-radius: 4px;
+      margin-left: 24px;
+      width: 200px;
+      height: 120px;
+      padding: 12px;
+
+      .address {
+        position: relative;
+        display: inline-block;
+        line-height: 68px;
+        vertical-align: top;
+        margin-left: 10px;
+      }
+
+      .robot {
+        height: 68px;
+        position: relative;
+        width: 40px;
+        display: inline-block;
+        background: url(https://www.redditstatic.com/desktop2x/img/id-cards/snoo-home@2x.png) 0 0% / 40px 68px;
+        margin-bottom: 8px;
+      }
+
+      .create-post-btn {
+        width: 100%;
+      }
+    }
+  }
 }
 
-.topics {
-  width: 80vw;
-  margin: 0 auto;
-  padding: 20px 24px;
+.create-topic-modal {
+  .new-post-content {
+    width: calc(100% - 32px) !important;
+    border: 1px solid #edeff1;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+
+  .error-message {
+    font-size: 12px;
+    margin-top: 8px;
+    color: red;
+  }
 }
