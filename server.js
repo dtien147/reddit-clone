@@ -39,6 +39,7 @@ const topics = [
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static('build'));
 
 app.get('/api', function(req, res) {
   res.send('API OK');
@@ -95,6 +96,10 @@ app.post('/api/topics/downvote', function(req, res) {
   const topic = topics.find(item => item.id === topicId);
   topic.votes -= 1;
   res.send(topic);
+});
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.listen(port, () => {
