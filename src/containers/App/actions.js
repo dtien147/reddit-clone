@@ -34,6 +34,9 @@ export const getTopicsFailed = error => ({
   error,
 });
 
+/**
+ * Get topics action
+ */
 export const getTopics = () =>
   async (dispatch) => {
     try {
@@ -61,6 +64,10 @@ export const createTopicFailed = error => ({
   error,
 });
 
+/**
+ * Create topic action
+ * @param {Object} newTopic
+ */
 export const createTopic = (newTopic) =>
   async (dispatch) => {
     try {
@@ -115,6 +122,10 @@ export const downvoteTopicFailed = error => ({
   error,
 });
 
+/**
+ * Downvote topic action
+ * @param {String} topicId
+ */
 export const downvoteTopic = (topicId) =>
   async (dispatch) => {
     try {

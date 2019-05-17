@@ -141,7 +141,7 @@ class App extends Component {
             <Button
               className="create-post-btn"
               onClick={this.onShowCreateTopicModal}
-              text="CREATE POST"
+              text="CREATE TOPIC"
             />
           </div>
           <Modal
